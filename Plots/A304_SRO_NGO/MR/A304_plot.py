@@ -9,7 +9,7 @@ fig, axs = plt.subplots(2, 4, figsize=(18, 9))
 axs = axs.flatten() 
 (ax1, ax2, ax3, ax4, ax5, ax6, ax7, ax8) = axs
 def read_data():
-    filename='C:\\Users\\Admin\\Desktop\\Data\\A304_MR\\A304_125K.csv'
+    filename='C:\\Users\\Admin\\Desktop\\Data\\A304_MR\\A304_150K.csv'
     df = pd.read_csv(filename, names=["I", "B","T", "V1", "V2", "V3", "V4","V5","V6","V7","V8",'Rel_value'])
     df['multiplier'] = 10**6
     (df['V5'],df['V6']) = (df['V6'], df['V5'])
