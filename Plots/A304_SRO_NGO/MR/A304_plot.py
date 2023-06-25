@@ -1,10 +1,26 @@
 import pandas as pd
+import tkinter as tk
+from tkinter import filedialog, simpledialog
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
+
+# Create a Tkinter root window
+root = tk.Tk()
+root.withdraw()  # Hide the root window
+
+# Open a file selection dialog
+filename = filedialog.askopenfilename(title="Select CSV File", filetypes=[("CSV files", "*.csv")])
+
+if len(filename) == 0: exit()
+
+# Prompt the user for a string input
+T = simpledialog.askstring("String Input", "Temperature:")
+# print("User string:", user_string)
+
 # filename='/home/lucky/Documents/PPMS/Data/A304_MR/A304_125K.csv'
-filename='C:\\Users\\Admin\\Desktop\\Data\\A304_MR\\A304_150K.csv'
-T = 150
+# filename='C:\\Users\\Admin\\Desktop\\Data\\A304_MR\\A304_150K.csv'
+
 
 df = pd.DataFrame()
 
